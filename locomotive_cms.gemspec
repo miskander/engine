@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'rails',                           '~> 3.2.3'
 
   s.add_dependency 'devise',                          '~> 1.5.3'
-  s.add_dependency 'cancan',                          '~> 1.6.7'
+  s.add_dependency 'cancan',                          '1.6.7'
 
   s.add_dependency 'mongo',                           '~> 1.5.2'
   s.add_dependency 'bson_ext',                        '~> 1.5.2'
