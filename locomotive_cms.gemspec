@@ -51,7 +51,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'highline',                        '~> 1.6.2'
   s.add_dependency 'unidecoder',                      '~> 1.1.1'
 
-  s.add_dependency 'rmagick',                         '~> 2.12.2'
+  #s.add_dependency 'rmagick',                         '~> 2.12.2'
   s.add_dependency 'carrierwave-mongoid',             '~> 0.2.1'
   s.add_dependency 'carrierwave',                     '~> 0.6.0'
   s.add_dependency 'fog',                             '~> 1.3.1'
