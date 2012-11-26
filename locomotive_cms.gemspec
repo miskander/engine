@@ -20,22 +20,22 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rake',                            '~> 0.9.2'
 
-  s.add_dependency 'rails',                           '~> 3.2.3'
-
-  s.add_dependency 'devise',                          '~> 1.5.3'
-  s.add_dependency 'cancan',                          '1.6.7'
+  s.add_dependency 'rails',                           '~> 3.2.5'
+  s.add_dependency 'devise-encryptable',              '~> 0.1.1'
+  s.add_dependency 'devise',                          '~> 2.1.0'
+  s.add_dependency 'cancan',                          '~> 1.6.7'
 
   s.add_dependency 'mongo',                           '~> 1.5.2'
   s.add_dependency 'bson_ext',                        '~> 1.5.2'
   s.add_dependency 'mongoid',                         '~> 2.4.9'
   s.add_dependency 'locomotive-mongoid-tree',         '~> 0.6.2'
 
-  s.add_dependency 'custom_fields',                   '~> 2.0.0.rc10'
+  s.add_dependency 'custom_fields',                   '~> 2.0.0.rc12'
 
   s.add_dependency 'kaminari',                        '~> 0.13.0'
 
-  s.add_dependency 'haml',                            '~> 3.1.4'
-  s.add_dependency 'jquery-rails',                    '~> 1.0.16'
+  s.add_dependency 'haml',                            '~> 3.1.6'
+  s.add_dependency 'jquery-rails',                    '~> 1.0.19'
   s.add_dependency 'rails-backbone',                  '~> 0.6.1'
   s.add_dependency 'codemirror-rails',                '~> 2.21'
   s.add_dependency 'locomotive-tinymce-rails',        '~> 3.4.7.2'
@@ -53,7 +53,7 @@ Gem::Specification.new do |s|
 
   s.add_dependency 'rmagick',                         '~> 2.12.2'
   s.add_dependency 'carrierwave-mongoid',             '~> 0.2.1'
-  s.add_dependency 'carrierwave',                     '~> 0.6.0'
+  s.add_dependency 'carrierwave',                     '~> 0.6.2'
   s.add_dependency 'fog',                             '~> 1.3.1'
   s.add_dependency 'dragonfly',                       '~> 0.9.8'
   s.add_dependency 'rack-cache',                      '~> 1.1'

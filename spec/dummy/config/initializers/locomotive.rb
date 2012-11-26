@@ -37,7 +37,7 @@ Locomotive.configure do |config|
   config.default_locale = :en
 
   # available locales suggested to "localize" a site. You will have to pick up at least one among that list.
-  config.site_locales = %w{en de fr pt-BR it nl no es ru}
+  config.site_locales = %w{en de fr pt-BR it nl nb es ru}
 
   # tell if logs are enabled. Useful for debug purpose.
   config.enable_logs = true
@@ -55,9 +55,6 @@ Locomotive.configure do |config|
   # in Liquid templates, extending the assigns used while rendering.
   # follow the Dependency Injection pattern
   # config.context_assign_extensions = {}
-
-  # add extra classes other than the defined content types among a site which will potentially used by the templatized pages.
-  config.models_for_templatization = %w(Foo)
 
   # "Public" forms can be protected from Cross-Site Request Forgery (CSRF) attacks.
   # By default, that protection is disabled (false) in order to keep backwards compatibility with the existing public forms.

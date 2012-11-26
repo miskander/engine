@@ -1,10 +1,11 @@
 require 'haml/helpers/action_view_mods'
 
-# Only preserve whitespace in the tag's content: https://github.com/nex3/haml/pull/503
+
 module ActionView
-  module Helpers #:nodoc:
+  module Helpers
     module TagHelper
 
+      # Only preserve whitespace in the tag's content: https://github.com/nex3/haml/pull/503
       def content_tag_with_haml_and_preserve(name, content_or_options_with_block = nil, *args, &block)
         return content_tag_without_haml(name, content_or_options_with_block, *args, &block) unless is_haml?
 

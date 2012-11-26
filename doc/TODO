@@ -141,6 +141,7 @@ x override sort for contents
 
 ? install a site by default at the first installation (without asking)
 
+
 BACKLOG:
 
 - custom_fields:
@@ -150,9 +151,6 @@ BACKLOG:
   - html view in the aloha popup
   - editable elements should wrap a tag: div, h1, ...etc (default span)
   - edit images (upload new ones, ...etc) => wait for aloha or send them an email ?
-- cucumber features for admin pages (in progress)
-(- duostack/doutcloud version)
-- write my first tutorial about locomotive
 - upgrade warning if new version of locomotive (maybe based on the commit id)
 - deploying workflow:
   - roll back a bad update
@@ -164,16 +162,6 @@ BACKLOG:
 
 - tooltip to explain the difference between 1.) Admin 2.) Author 3.) Designer?
 - [bushido] guiders / welcome page / devise cas authentication (SSO)
-
-REFACTORING:
-
-  - move content_type and content_instances in the CustomFields plugin (much more appropriate)
-
-BUGS:
-  x mode author: settings KO + editable elements non visibles
-  x locales pour le locomotive editor => KO
-  ! impossible de sauvegarder une page
-
 
 NICE TO HAVE:
 - export site

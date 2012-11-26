@@ -5,17 +5,6 @@ rescue LoadError
   puts 'You must `gem install bundler` and `bundle install` to run rake tasks'
 end
 
-# Locomotive::Page.each do |page|
-#   page.editable_elements.each_with_index do |el, index|
-#     next if el._type != 'Locomotive::EditableFile' || el.attributes['source'].is_a?(Hash)
-#
-#     value = el.attributes['source']
-#
-#     page.collection.update({ '_id' => page._id }, { '$set' => { "editable_elements.#{index}.source" => { 'en' => value } } })
-#   end
-# end
-
-
 # ================ GLOBAL VARIABLES ==============
 
 $database_name      = 'locomotive_engine_dev'
@@ -314,7 +303,7 @@ if collection = db.collections.detect { |c| c.name == 'pages' }
     modifications['locales']        = [locale]
     modifications['response_type']  = 'text/html'
 
-    %w(title slug fullpath raw_template serialized_template template_dependencies snippet_dependencies seo_title meta_keywords meta_description).each do |attr|
+    %w(title slug fullpath raw_template serialized_template template_dependencies snippet_dependencies seo_title meta_keywords meta_description redirect_url).each do |attr|
       modifications[attr] = { locale => page[attr] }
     end
 
@@ -366,6 +355,11 @@ if collection = db.collections.detect { |c| c.name == 'pages' }
   end
 
   collection.update({}, { '$unset' => { 'parts' => '1', 'path' => '1', 'layout_id' => '1' } }, { :multi => true })
+end
+
+# Update Norwegian locale from 'no' to 'nb'
+if collection = db.collections.detect { |c| c.name == 'locomotive_accounts' }
+  collection.update({ 'locale' => 'no' }, { '$set' => { 'locale' => 'nb' } }, { :multi => true })
 end
 
 # some cleaning
@@ -429,3 +423,5 @@ else
     FileUtils.rm_rf folder
   end
 end
+
+puts "\n\n\033[1mImportant:\033[22m in order to avoid a bug with sessions after upgrading to the 2.0 version, you have to change your secret token key by updating your config/initializers/secret_token.rb file\n\n"

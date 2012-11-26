@@ -1,4 +1,4 @@
-ru:  
+ru:
   errors:
       messages:
         domain_taken: "%{value} уже занято"
@@ -15,7 +15,7 @@ ru:
           liquid_extend: "Страница '%{fullpath}' наследует (расширяет) несуществующий шаблон"
           liquid_translation: "Страница '%{fullpath}' наследует (расширяет) непереведенный шаблон"
         too_few_custom_fields: "По крайней мере одно поле является обязательным"
-        security: "проблема безопасности"  
+        security: "проблема безопасности"
 
   attributes:
     defaults:
